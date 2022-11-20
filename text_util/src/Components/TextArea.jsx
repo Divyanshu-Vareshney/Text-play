@@ -56,7 +56,7 @@ export default function TextArea(props) {
     </div>
     <div className='container'>
         <h2 className={` text-${props.mode==="light"?"dark":"light"}`}>Text Summary</h2>
-        <p className={` text-${props.mode==="light"?"dark":"light"}`}>This Paragraph Contains {Text.split(" ").length} Words and {Text.length} Characters</p>
+        <p className={` text-${props.mode==="light"?"dark":"light"}`}>This Paragraph Contains {Text.split(" ").filter((element)=>{return element.length!=0}).length} Words and {Text.length} Characters</p>
         <h2 className={` text-${props.mode==="light"?"dark":"light"}`}>preview</h2>
         <p className={` text-${props.mode==="light"?"dark":"light"}`}>{Text.length>0?Text:"Enter text here to preview"}</p>
     </div>

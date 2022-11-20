@@ -4,12 +4,11 @@ import About from './Components/About';
 import Navbar from './Components/Navbar';
 import TextArea from './Components/TextArea';
 import React, { useState } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+// } from "react-router-dom";
 import Alert from './Components/Alert';
 
 function App() {
@@ -43,14 +42,15 @@ function App() {
   }
   return (
     <>
-      <Router>
+      {/* <Router> */}
     <Navbar title="FunWithText" mode={Mode} toggleMode={toggleMode} Print={modee}/>
     <Alert alert={alert}/>
-    <Routes>
-          <Route path="/about" element={<About mode={Mode} />}/>
-          <Route path="/" element={<TextArea heading="Enter The Text to play" mode={Mode} sendAlert={sendAlert}/>}/>
-        </Routes>
-    </Router>
+    {/* <Routes> */}
+          {/* <Route path="/about" element={<About mode={Mode} />}/> */}
+          {/* <Route path="/" element={}/> */}
+          <TextArea heading="Enter The Text to play" mode={Mode} sendAlert={sendAlert}/>
+        {/* </Routes> */}
+    {/* </Router> */}
     </>
    
   );
